@@ -31,7 +31,7 @@ function Timer() {
   
     const stop = () => {
       clearInterval(interv);
-      setStatus(1);
+      setStatus(2);
     }
   
     const resume = () => start();
