@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import TimerButton from './TimerButton'
 import TimerDisplay from './TimerDisplay'
 
-function Timer(props) {
+function Timer() {
 
     const [time, setTime] = useState({h:0, m:0, s:0})
     const [interv, setInterv] = useState();
@@ -34,14 +34,12 @@ function Timer(props) {
       setStatus(1);
     }
   
-    //const resume = () => start();
+    const resume = () => start();
    
-    var operation = props.active === 1 ? start : stop;
 
     return (
         <div className="todo-timer">
-          <TimerButton ops={operation} status={status} active={active}></TimerButton>
-        {/* <TimerButton  start={start} status={status} stop={stop} resume={resume}></TimerButton> */}
+        <TimerButton  start={start} status={status} stop={stop} resume={resume}></TimerButton>
         <TimerDisplay time={time} ></TimerDisplay>       
         </div>
     )

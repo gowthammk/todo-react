@@ -6,25 +6,25 @@ function TimerButton(props) {
         <div>
             {(props.status === 0) ?
             <div>
-                <AiOutlineCheck onClick={props.ops}></AiOutlineCheck>
+                <AiOutlineCheck onClick={props.start}></AiOutlineCheck>
             </div>
             : ""
             }
 
             {(props.status === 1) ?
             <div>
-                <AiOutlineClose onClick={props.ops}></AiOutlineClose>
+                <AiOutlineClose onClick={props.stop}></AiOutlineClose>
             </div>
             : ""
             }
 
-            {/* {(props.active === 2) ?
+            {(props.status === 2) ?
             <div>
-                <AiOutlineCheck onClick={props.ops}></AiOutlineCheck>
+                <AiOutlineCheck onClick={props.resume}></AiOutlineCheck>
             </div>
             : ""
-            } */}
-        </div>
+            } 
+            </div>
             
     )
 }
